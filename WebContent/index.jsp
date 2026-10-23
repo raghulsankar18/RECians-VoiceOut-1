@@ -1,0 +1,63 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECian's VoiceOut - Rajalakshmi Engineering College</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Top Navigation Header -->
+    <header>
+        <div class="logo-area">
+            <span class="badge">REC</span>
+            <div>
+                <div class="title-text">RECian's VoiceOut</div>
+                <div class="sub-tagline">Rajalakshmi Engineering College &bull; Student Grievance &amp; Improvement Portal</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container">
+        <section class="hero-card">
+            <span class="hero-tag">Official Student Voice Platform</span>
+            <h1>Speak Up, Shape REC</h1>
+            <p>
+                RECian's VoiceOut is your central platform at Rajalakshmi Engineering College to raise campus-related
+                concerns, provide constructive feedback, and track resolution progress directly with college authorities.
+            </p>
+
+            <!-- Call to Action: Leads directly to Student Sign-in / Registration -->
+            <div class="btn-group">
+                <a href="student/login.jsp" class="btn btn-primary btn-large">Get Started &rarr;</a>
+            </div>
+
+            <!-- 3 Key Pillars of the Platform -->
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">&#9997;</div>
+                    <h3>Voice Concerns</h3>
+                    <p>Report hostel, canteen, academic, transport, or confidential concerns directly to college administration.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">&#129309;</div>
+                    <h3>Support Campus Causes</h3>
+                    <p>Endorse public campus issues raised by fellow RECians with 1-click support to highlight community priorities.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">&#128269;</div>
+                    <h3>Track Live Progress</h3>
+                    <p>Follow your grievances in real time from submission to review, active progress, and final resolution.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (No Admin Links displayed here) -->
+    <footer>
+        &copy; <%= java.time.Year.now() %> Rajalakshmi Engineering College &bull; RECian's VoiceOut
+    </footer>
+</body>
+</html>

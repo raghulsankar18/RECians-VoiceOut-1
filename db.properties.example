@@ -1,0 +1,7 @@
+# =====================================================================
+# Database Configuration Template for RECian's VoiceOut
+# Copy this file to 'db.properties' and set your local MySQL credentials.
+# =====================================================================
+db.url=jdbc:mysql://localhost:3306/recians_voiceout?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+db.user=your_mysql_username
+db.password=your_mysql_password

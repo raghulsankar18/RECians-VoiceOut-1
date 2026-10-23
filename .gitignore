@@ -1,0 +1,11 @@
+# Database credentials (keep private)
+db.properties
+WebContent/WEB-INF/classes/db.properties
+
+# Compiled class files
+*.class
+WebContent/WEB-INF/classes/com/
+
+# Temporary files
+sources.txt
+*.log
