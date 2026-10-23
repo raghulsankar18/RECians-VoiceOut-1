@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Complaint - RECian's VoiceOut</title>
+    <meta name="description" content="Submit a campus grievance or feedback on RECian's VoiceOut portal for Rajalakshmi Engineering College.">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .demo-notice { background: rgba(245,158,11,.12); border: 1px solid rgba(245,158,11,.4); color: #fde68a; padding: .75rem 1.25rem; text-align:center; font-size:.85rem; }
+        .demo-notice a { color: #fbbf24; }
+        .form-container { max-width: 720px; margin: 0 auto; }
+        .form-header { margin-bottom: 2rem; }
+        .radio-group { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: .5rem; }
+        .radio-option { display: flex; align-items: center; gap: .5rem; cursor: pointer; }
+        .radio-option input { accent-color: #2563eb; width: 1rem; height: 1rem; }
+    </style>
+</head>
+<body>
+    <div class="demo-notice">
+        🎓 UI Preview Only — form submission requires a live Java server.
+        <a href="https://github.com/raghulsankar18/RECians-VoiceOut-1" target="_blank">View on GitHub</a>
+    </div>
+
+    <header>
+        <div class="logo-area">
+            <span class="badge">REC</span>
+            <div>
+                <a href="../index.html" style="text-decoration:none;color:inherit;">
+                    <div class="title-text">RECian's VoiceOut</div>
+                </a>
+                <div class="sub-tagline">Rajalakshmi Engineering College &bull; Submit Complaint</div>
+            </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:1rem;">
+            <span style="font-size:.9rem;color:#94a3b8;">Demo Student</span>
+            <a href="dashboard.html" class="btn btn-secondary" style="padding:.4rem .8rem;font-size:.8rem;">&larr; Dashboard</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="form-container">
+            <div class="form-header">
+                <h2 class="section-heading">Submit a New Grievance</h2>
+                <p class="section-subheading">Describe your concern clearly. Our team reviews all submissions within 3-5 working days.</p>
+            </div>
+
+            <div class="form-container" style="background:rgba(30,41,59,0.75);border:1px solid rgba(255,255,255,0.12);border-radius:18px;padding:2.5rem;box-shadow:0 20px 40px rgba(0,0,0,0.4);">
+                <div class="alert alert-info">
+                    ℹ️ This is a UI preview. Submission requires the Java backend server.
+                </div>
+
+                <form onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="category">Campus Category <span class="required">*</span></label>
+                        <select id="category" name="categoryId" required>
+                            <option value="">-- Select a campus sector --</option>
+                            <option value="1">Hostel &amp; Accommodation</option>
+                            <option value="2">Canteen &amp; Food</option>
+                            <option value="3">Academic &amp; Faculty</option>
+                            <option value="4">Transport &amp; Bus</option>
+                            <option value="5">Infrastructure &amp; Facilities</option>
+                            <option value="6">Confidential Concerns (Private)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="title">Complaint Title / Subject <span class="required">*</span></label>
+                        <input type="text" id="title" name="title"
+                               placeholder="Brief title summarising your grievance (max 100 chars)"
+                               maxlength="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Detailed Description <span class="required">*</span></label>
+                        <textarea id="description" name="description" rows="6"
+                                  placeholder="Describe the problem clearly — include location, time, frequency, and any previous attempts to resolve it."
+                                  maxlength="2000" required></textarea>
+                        <small class="form-hint">Max 2000 characters. Be specific and factual.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Visibility</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="isConfidential" value="false" checked>
+                                <span>🌐 <strong>Public</strong> — Other students can view and support this issue</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="isConfidential" value="true">
+                                <span>🔒 <strong>Confidential</strong> — Only you and college admin can view this</span>
+                            </label>
+                        </div>
+                        <small class="form-hint">Public complaints can receive community support votes to prioritise resolution.</small>
+                    </div>
+
+                    <button type="button" class="btn btn-primary btn-block"
+                        onclick="alert('Backend required for submission. This is a UI preview.')">
+                        Submit Grievance &rarr;
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 Rajalakshmi Engineering College &bull; RECian's VoiceOut
+    </footer>
+</body>
+</html>

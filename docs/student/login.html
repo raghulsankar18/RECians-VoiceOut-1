@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Sign In - RECian's VoiceOut</title>
+    <meta name="description" content="Sign in to the RECian's VoiceOut student grievance portal using your college credentials.">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .demo-notice { background: rgba(245,158,11,.12); border: 1px solid rgba(245,158,11,.4); color: #fde68a; padding: .75rem 1.25rem; text-align:center; font-size:.85rem; }
+        .demo-notice a { color: #fbbf24; }
+    </style>
+</head>
+<body>
+    <div class="demo-notice">
+        🎓 UI Preview Only — form submission requires a live Java server.
+        <a href="https://github.com/raghulsankar18/RECians-VoiceOut-1" target="_blank">View on GitHub</a>
+    </div>
+
+    <header>
+        <div class="logo-area">
+            <span class="badge">REC</span>
+            <div>
+                <a href="../index.html" style="text-decoration:none;color:inherit;">
+                    <div class="title-text">RECian's VoiceOut</div>
+                </a>
+                <div class="sub-tagline">Rajalakshmi Engineering College &bull; Student Portal</div>
+            </div>
+        </div>
+        <div>
+            <a href="../index.html" class="btn btn-secondary" style="padding:.5rem 1rem;font-size:.85rem;">&larr; Back to Home</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="auth-card">
+            <h2>Student Sign In</h2>
+            <p class="subtitle">Access your grievance dashboard using your college credentials</p>
+
+            <div class="alert alert-info">
+                ℹ️ This is a UI preview. Login requires the Java backend server.
+            </div>
+
+            <form onsubmit="return false;">
+                <div class="form-group">
+                    <label for="email">College Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="username@rajalakshmi.edu.in" required>
+                    <small class="form-hint">Must end with @rajalakshmi.edu.in</small>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="button" class="btn btn-primary btn-block" onclick="alert('Backend required for login. This is a UI preview.')">Sign In &rarr;</button>
+            </form>
+
+            <div class="auth-footer">
+                Don't have an account yet?
+                <a href="register.html" class="link-highlight">Register Here</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 Rajalakshmi Engineering College &bull; RECian's VoiceOut
+    </footer>
+</body>
+</html>

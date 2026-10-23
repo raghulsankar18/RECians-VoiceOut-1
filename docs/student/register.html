@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration - RECian's VoiceOut</title>
+    <meta name="description" content="Register for the RECian's VoiceOut student grievance portal using your official college email.">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .demo-notice { background: rgba(245,158,11,.12); border: 1px solid rgba(245,158,11,.4); color: #fde68a; padding: .75rem 1.25rem; text-align:center; font-size:.85rem; }
+        .demo-notice a { color: #fbbf24; }
+    </style>
+</head>
+<body>
+    <div class="demo-notice">
+        🎓 UI Preview Only — form submission requires a live Java server.
+        <a href="https://github.com/raghulsankar18/RECians-VoiceOut-1" target="_blank">View on GitHub</a>
+    </div>
+
+    <header>
+        <div class="logo-area">
+            <span class="badge">REC</span>
+            <div>
+                <a href="../index.html" style="text-decoration:none;color:inherit;">
+                    <div class="title-text">RECian's VoiceOut</div>
+                </a>
+                <div class="sub-tagline">Rajalakshmi Engineering College &bull; Student Registration</div>
+            </div>
+        </div>
+        <div>
+            <a href="login.html" class="btn btn-secondary" style="padding:.5rem 1rem;font-size:.85rem;">Sign In</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="auth-card">
+            <h2>Create Student Account</h2>
+            <p class="subtitle">Join the RECian community to voice concerns and improve campus life</p>
+
+            <div class="alert alert-info">
+                ℹ️ This is a UI preview. Registration requires the Java backend server.
+            </div>
+
+            <form onsubmit="return false;">
+                <div class="form-group">
+                    <label for="fullName">Full Name <span class="required">*</span></label>
+                    <input type="text" id="fullName" name="fullName" placeholder="e.g. Navaneethan S" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">REC College Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="username@rajalakshmi.edu.in"
+                           pattern=".+@rajalakshmi\.edu\.in$" title="Must end with @rajalakshmi.edu.in" required>
+                    <small class="form-hint">Only official REC email addresses (@rajalakshmi.edu.in) are permitted.</small>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password <span class="required">*</span></label>
+                    <input type="password" id="password" name="password"
+                           placeholder="Create a strong password (min 6 characters)" minlength="6" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password <span class="required">*</span></label>
+                    <input type="password" id="confirmPassword" name="confirmPassword"
+                           placeholder="Re-enter your password" minlength="6" required>
+                </div>
+                <button type="button" class="btn btn-primary btn-block"
+                    onclick="alert('Backend required for registration. This is a UI preview.')">Register &rarr;</button>
+            </form>
+
+            <div class="auth-footer">
+                Already registered?
+                <a href="login.html" class="link-highlight">Sign In Here</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 Rajalakshmi Engineering College &bull; RECian's VoiceOut
+    </footer>
+</body>
+</html>

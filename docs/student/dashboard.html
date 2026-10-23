@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - RECian's VoiceOut</title>
+    <meta name="description" content="Student dashboard for RECian's VoiceOut — view campus categories, submit and track grievances.">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .demo-notice { background: rgba(245,158,11,.12); border: 1px solid rgba(245,158,11,.4); color: #fde68a; padding: .75rem 1.25rem; text-align:center; font-size:.85rem; }
+        .demo-notice a { color: #fbbf24; }
+    </style>
+</head>
+<body>
+    <div class="demo-notice">
+        🎓 UI Preview — data shown is sample/demo only.
+        <a href="https://github.com/raghulsankar18/RECians-VoiceOut-1" target="_blank">View on GitHub</a>
+    </div>
+
+    <header>
+        <div class="logo-area">
+            <span class="badge">REC</span>
+            <div>
+                <div class="title-text">RECian's VoiceOut</div>
+                <div class="sub-tagline">Rajalakshmi Engineering College &bull; Student Portal</div>
+            </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:1rem;">
+            <span style="font-size:.9rem;color:#94a3b8;">Demo Student (CSE)</span>
+            <a href="login.html" class="btn btn-secondary" style="padding:.4rem .8rem;font-size:.8rem;">Logout</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Dashboard Greeting -->
+        <div class="dashboard-greeting">
+            <div>
+                <h2>Hello, Demo Student!</h2>
+                <p>Welcome to your central campus grievance and feedback redressal platform.</p>
+            </div>
+            <div>
+                <a href="submit-complaint.html" class="btn btn-primary btn-large submit-cta-btn">&#43; Submit Complaint</a>
+            </div>
+        </div>
+
+        <!-- Categories Carousel -->
+        <div class="carousel-header-area">
+            <div>
+                <h3 class="section-heading">Campus Sectors &bull; Categories</h3>
+                <p class="section-subheading">Scroll horizontally to explore categories. Click any sector to view and support community complaints.</p>
+            </div>
+            <div class="carousel-nav-hint">
+                <span class="scroll-arrow">&larr;</span>
+                <span>Scroll Categories</span>
+                <span class="scroll-arrow">&rarr;</span>
+            </div>
+        </div>
+
+        <div class="category-carousel-wrapper">
+            <div class="category-carousel" id="categoryCarousel">
+                <a href="#" class="carousel-card" onclick="alert('Requires live backend'); return false;">
+                    <div class="carousel-card-top"><span class="category-index">Sector 01</span></div>
+                    <h4>Hostel &amp; Accommodation</h4>
+                    <p>Issues related to hostel rooms, facilities, cleanliness, maintenance, and hostel administration.</p>
+                    <span class="card-action">View Grievances &amp; Support &rarr;</span>
+                </a>
+                <a href="#" class="carousel-card" onclick="alert('Requires live backend'); return false;">
+                    <div class="carousel-card-top"><span class="category-index">Sector 02</span></div>
+                    <h4>Canteen &amp; Food</h4>
+                    <p>Concerns about canteen food quality, hygiene, pricing, menu variety, and service.</p>
+                    <span class="card-action">View Grievances &amp; Support &rarr;</span>
+                </a>
+                <a href="#" class="carousel-card" onclick="alert('Requires live backend'); return false;">
+                    <div class="carousel-card-top"><span class="category-index">Sector 03</span></div>
+                    <h4>Academic &amp; Faculty</h4>
+                    <p>Feedback on teaching quality, attendance policies, exam schedules, and academic support.</p>
+                    <span class="card-action">View Grievances &amp; Support &rarr;</span>
+                </a>
+                <a href="#" class="carousel-card" onclick="alert('Requires live backend'); return false;">
+                    <div class="carousel-card-top"><span class="category-index">Sector 04</span></div>
+                    <h4>Transport &amp; Bus</h4>
+                    <p>Complaints and suggestions related to college bus routes, timings, driver conduct, and vehicle condition.</p>
+                    <span class="card-action">View Grievances &amp; Support &rarr;</span>
+                </a>
+                <a href="#" class="carousel-card" onclick="alert('Requires live backend'); return false;">
+                    <div class="carousel-card-top"><span class="category-index">Sector 05</span></div>
+                    <h4>Infrastructure &amp; Facilities</h4>
+                    <p>Issues with classrooms, labs, restrooms, electricity, water supply, and campus maintenance.</p>
+                    <span class="card-action">View Grievances &amp; Support &rarr;</span>
+                </a>
+                <a href="#" class="carousel-card category-confidential" onclick="alert('Requires live backend'); return false;">
+                    <div class="carousel-card-top">
+                        <span class="category-index">Sector 06</span>
+                        <span class="badge-confidential">&#128274; Confidential</span>
+                    </div>
+                    <h4>Confidential Concerns</h4>
+                    <p>Private and sensitive issues visible only to you and college authorities. Complete anonymity guaranteed.</p>
+                    <span class="card-action">Submit Privately &rarr;</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- My Grievances Table -->
+        <div class="recent-section" style="margin-top:2.5rem;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+                <div>
+                    <h3 class="section-heading" style="margin:0;">My Grievances &amp; Status Tracking</h3>
+                    <p class="section-subheading" style="margin:0;">Monitor progress updates on complaints you submitted</p>
+                </div>
+                <a href="submit-complaint.html" class="link-highlight" style="font-size:.9rem;">&#43; Submit Another Issue</a>
+            </div>
+
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Tracking Code</th>
+                            <th>Category</th>
+                            <th>Subject</th>
+                            <th>Date Filed</th>
+                            <th>Support Count</th>
+                            <th>Status</th>
+                            <th>Visibility</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong style="color:#38bdf8;">REC-2025-0042</strong></td>
+                            <td>Canteen &amp; Food</td>
+                            <td>Poor quality lunch served on weekdays</td>
+                            <td>2025-10-15</td>
+                            <td>12 student(s)</td>
+                            <td><span class="status-badge status-under-review">Under Review</span></td>
+                            <td><span style="color:#94a3b8;font-size:.85rem;">Public</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color:#38bdf8;">REC-2025-0031</strong></td>
+                            <td>Infrastructure</td>
+                            <td>AC not working in Lab 3B since 2 weeks</td>
+                            <td>2025-10-08</td>
+                            <td>8 student(s)</td>
+                            <td><span class="status-badge status-in-progress">In Progress</span></td>
+                            <td><span style="color:#94a3b8;font-size:.85rem;">Public</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color:#38bdf8;">REC-2025-0018</strong></td>
+                            <td>Transport</td>
+                            <td>Route 7 bus consistently late by 30 mins</td>
+                            <td>2025-09-20</td>
+                            <td>24 student(s)</td>
+                            <td><span class="status-badge status-resolved">Resolved</span></td>
+                            <td><span style="color:#94a3b8;font-size:.85rem;">Public</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 Rajalakshmi Engineering College &bull; RECian's VoiceOut
+    </footer>
+</body>
+</html>
